@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>结果反馈对画线准确性的影响 - 实验心理学</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman','宋体',serif;color:#222;background:#fff;line-height:1.8;font-size:16px}
+.container{max-width:800px;margin:0 auto;padding:40px 24px}
+.article-header{margin-bottom:48px}
+.article-header h1{font-size:28px;font-weight:700;line-height:1.3;margin-bottom:12px;color:#111}
+.article-meta{font-size:14px;color:#666;line-height:1.6;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.tag{display:inline-block;padding:2px 10px;font-size:12px;border:1px solid #ddd;border-radius:3px;color:#666}
+section{margin-bottom:40px}
+h2{font-size:22px;font-weight:700;color:#111;border-bottom:1px solid #e1e1e1;padding-bottom:8px;margin-bottom:20px}
+h3{font-size:18px;font-weight:600;color:#333;margin-top:28px;margin-bottom:12px}
+p{margin-bottom:18px;text-indent:2em}
+.no-indent{text-indent:0}
+.figure-box{margin:28px 0;padding:16px;background:#f8f8f8;border:1px solid #e1e1e1;border-radius:4px}
+.figure-box img{display:block;max-width:100%;height:auto;margin:0 auto 12px}
+.figure-box .caption{font-size:13px;color:#666;line-height:1.5;text-indent:0}
+.download-bar{position:sticky;bottom:0;background:#fff;border-top:1px solid #e1e1e1;padding:12px 0;text-align:center;z-index:100}
+.btn-download{display:inline-block;padding:10px 28px;font-size:15px;font-family:Georgia,serif;background:#a31b2c;color:#fff;border:none;border-radius:4px;cursor:pointer}
+.btn-download:hover{background:#7e1523}
+.btn-download::before{content:"\2193 "}
+.top-link{position:fixed;bottom:80px;right:24px;width:40px;height:40px;background:#f0f0f0;border:1px solid #ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#666;opacity:0;pointer-events:none;text-decoration:none}
+.top-link.visible{opacity:1;pointer-events:auto}
+.top-link:hover{background:#ddd;color:#a31b2c}
+@media(max-width:600px){.container{padding:24px 16px}.article-header h1{font-size:22px}h2{font-size:19px}}
+</style>
+</head><body>
+<div class="container">
+<article>
+<header class="article-header">
+<h1>结果反馈对画线准确性的影响</h1>
+<div class="article-meta">
+<p class="no-indent authors">Sancho, Pans, Chen, Forest</p>
+<p class="no-indent"><span class="journal">Experimental Psychology</span> &middot; 11 September 2025</p>
+<p class="no-indent">DOI: 11.4514/s19198-1078-69676-x</p>
+</div>
+<div class="tags">
+<span class="tag">实验心理学</span><span class="tag">结果反馈</span><span class="tag">效果律</span><span class="tag">画线任务</span><span class="tag">运动学习</span>
+</div>
+</header>
+
+<section id="abstract">
+<h2>摘要</h2>
+<p><strong>结果反馈</strong>（knowledge of results, KR）是指学习者在完成学习任务后从外部获得的关于动作结果的信息。</p>
+<p>本实验沿用 Thorndike（1927）的经典画线任务范式，采用双因素混合设计，旨在探讨结果反馈对画线准确性的影响，并验证效果律（law of effect）在精细运动学习中的作用。结果显示，结果反馈练习后在后测阶段的画线准确性显著提高，而控制组未见显著变化，表明及时的结果反馈能够强化正确动作，提高动作准确性，并通过效果律机制调节行为重复概率。本研究验证了效果律在运动学习中的适用性，为运动技能训练提供了实证参考。</p>
+</section>
+
+<section id="introduction">
+<h2>前言</h2>
+<p>在运动技能学习过程中，如何通过外部信息优化动作表现一直是心理学研究的重要议题。其中，结果反馈作为一种外部信息形式，被广泛应用于运动训练和行为纠正等领域。Thorndike（1898）通过“迷笼实验”首次提出了“效果律”（Law of Effect），即在特定情境下，产生令人满意结果的反应更可能被重复，而产生令人不满意结果的反应则更可能被抑制的现象。这一理论强调了行为后果在学习过程中的重要作用，为后续的行为主义理论奠定了基础。</p>
+<p>Thorndike（1927）进一步在其经典的画线实验中，探讨了结果反馈对精细运动任务表现的影响。在实验中，被试需在盲目状态下尽可能画出与标准线段相等的线条。实验结果表明，及时的结果反馈能够显著提高被试的画线准确性，验证了效果律在精细运动学习中的适用性。</p>
+<p>然而，先前的研究主要聚焦于画线任务中结果反馈的有无所带来的简单影响，而对反馈形式、频率等维度的系统操控仍相对有限。已有文献提示反馈不仅可能促进学习，也可能在一定条件下干扰学习（Salmoni, Schmidt, &amp; Walter, 1984）。</p>
+<p>因此，本实验首先从结果反馈的有无对画线任务准确性的影响切入，以复现并验证效果率在精细运动学习中的作用机制。研究假设是：在及时且明确的结果反馈条件下，被试的画线准确性将显著提升。</p>
+</section>
+
+<section id="results">
+<h2>结果</h2>
+<p>本次实验共收集到了 35 份数据，其中 3 名被试的数据含有缺失值。最终剔除 1 名被试的数据（编号 402），剩余 34 份数据进入后续分析。</p>
+
+<h3>随机性检验</h3>
+<p>Levene 方差齐性检验结果表明，两组在前测平均绝对误差符合方差齐性，F(1, 32) = 1.86, p = 0.182。独立样本 t 检验结果表明，两组在前测阶段的平均绝对误差无显著差异，t(32) = 0.04, p = 0.966，说明分组是随机的。</p>
+
+<h3>前后测比较</h3>
+<p>结果显示：结果反馈的主效应显著，F(1, 32) = 9.64, p = 0.004, partial η² = 0.232；测量阶段的主效应不显著，F(1, 32) = 0.62, p = 0.438；交互作用显著，F(1, 32) = 10.93, p = 0.002, partial η² = 0.255。简单主效应分析表明，实验组测量阶段的简单主效应显著，F(1, 32) = 8.89, p = 0.005, partial η² = 0.217；控制组测量阶段的简单主效应不显著，F(1, 32) = 3.00, p = 0.09。</p>
+
+<div class="figure-box">
+<img src="https://pic1.imgdb.cn/item/69aea553afde4f1fb1c76524.png" alt="表1">
+<p class="caption"><strong>表1 实验组与控制组前、后测量阶段的平均绝对误差</strong>（M±SD，单位：mm）</p>
+</div>
+
+<div class="figure-box">
+<img src="https://pic1.imgdb.cn/item/69aeaa74afde4f1fb1c790fd.png" alt="图1">
+<p class="caption"><strong>图1 实验组与控制组在练习前后的平均绝对误差比较</strong><br>图中误差线为标准误；n.s. = not significant (p ≥ 0.050)；***p &lt; 0.001</p>
+</div>
+
+<h3>练习过程比较</h3>
+<p>结果显示：结果反馈的主效应显著，F(1, 32) = 55.31, p &lt; 0.001, partial η² = 0.633；练习阶段的主效应不显著，F(2, 60) = 0.80, p = 0.446；交互作用不显著，F(2, 60) = 1.81, p = 0.174。</p>
+<p>对于实验组，练习阶段的简单主效应不显著，F(4, 32) = 0.21, p = 0.932；对于控制组，练习阶段的简单主效应显著，F(4, 32) = 3.00, p = 0.033, partial η² = 0.273。</p>
+
+<div class="figure-box">
+<img src="https://pic1.imgdb.cn/item/69aeaae3afde4f1fb1c79121.png" alt="表2">
+<p class="caption"><strong>表2 实验组与控制组在不同练习阶段的平均绝对误差</strong>（M±SD，单位：mm）</p>
+</div>
+
+<div class="figure-box">
+<img src="https://pic1.imgdb.cn/item/69aeab0cafde4f1fb1c7913f.png" alt="图2">
+<p class="caption"><strong>图2 实验组与控制组在不同练习阶段的平均绝对误差比较</strong><br>图中误差线为标准误</p>
+</div>
+</section>
+
+<section id="discussion">
+<h2>讨论</h2>
+<p>本实验旨在研究结果反馈对画线准确性的影响。结果总体支持了前言中的假设，即及时的结果反馈能够显著提高被试的画线准确性。</p>
+<p>结合练习过程分析，实验组的误差在第一次反馈后即显著降低，后续阶段保持稳定，与 Snoddy（1926）提出的快速–慢速学习模式一致。</p>
+<p>从操作性条件作用的角度来看，这一结果可以通过效果率来解释，与实验中观察到的实验组误差快速下降、控制组无显著改善的现象一致（Skinner, 1938）。</p>
+<p>控制组在无反馈条件下虽表现出一定下降趋势，但未达到显著水平，说明纯单重复练习不足以显著改善精细动作表现。</p>
+<p>本实验仍有一定局限。有效样本量相对较小（N = 34），统计功效有限；本实验采用均值替补缺失值，可能低估数据真实波动。未来研究可进一步考察反馈的形式、时机以及频率，以全面揭示反馈在不同条件下的作用机制。</p>
+<p>综上所述，本研究通过混合设计验证了结果反馈对画线准确性的促进作用，为精细动作训练提供了实践指导。</p>
+</section>
+
+<section id="methods">
+<h2>方法和设计</h2>
+
+<h3>被试</h3>
+<p>本实验共招募 35 名被试，男性 18 名、女性 17 名，年龄范围 18–21 岁（M = 19.41，SD = 0.84）。所有被试均为北京大学本科生，视力正常，右利手。</p>
+
+<h3>材料和仪器</h3>
+<p>实验材料包括：白纸（呈现 50.00 mm 黑色线段作为标准刺激）、作答纸、遮板、毫米刻度尺以及黑色中性笔。</p>
+
+<h3>实验设计</h3>
+<p>本实验采用 2（结果反馈：实验组、控制组）×2（测量阶段：前测、后测）的双因素混合设计。因变量为画线准确性，以平均绝对误差衡量。</p>
+<p>实验控制了坐姿、视距、手臂支点位置等额外变量，各组试次之间安排 1–2 分钟休息。</p>
+
+<h3>实验程序</h3>
+<p>实验共有 3 个阶段，共 7 组画线任务，每组 20 次画线任务。</p>
+<p>在前测阶段，主试陈述指导语，引导被试进行 20 次画线任务。</p>
+<p>在练习阶段，对实验组被试，主试在每次作画后立即测量并提供反馈：误差 &gt; 5mm 时反馈“长了”或“短了”；&gt; 2mm ≤ 5mm 时反馈“稍长”或“稍短”；≤ 2mm 时反馈“正好”。控制组被试在画线过程中不给予任何反馈。</p>
+<p>在后测阶段，以与前测相同的方式进行 20 次画线任务。</p>
+<p>全部阶段完成后，主试测量并记录每次画线长度。</p>
+</section>
+
+</article>
+</div>
+
+<div class="download-bar">
+<button class="btn-download" onclick="downloadArticle()">下载带图完整文章</button>
+</div>
+
+<a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" id="topLink">&uarr;</a>
+
+<script>
+window.addEventListener('scroll',function(){
+  var t=document.getElementById('topLink');
+  t.className='top-link'+(window.scrollY>300?' visible':'');
+});
+
+function downloadArticle(){
+  var btn=document.querySelector('.btn-download');
+  btn.classList.add('loading');
+  btn.textContent='准备下载…';
+
+  setTimeout(function(){
+    var title=document.querySelector('h1').textContent;
+    var h='<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width,initial-scale=1.0">\n<title>'+title+'</title>\n<style>\n';
+    h+='body{font-family:Georgia,"Times New Roman",serif;color:#222;background:#fff;line-height:1.8;padding:20px;}\n';
+    h+='.container{max-width:800px;margin:0 auto;}\n';
+    h+='h1{font-size:24px;text-align:center;margin-bottom:6px;}\n';
+    h+='h2{font-size:20px;border-bottom:1px solid #ddd;padding-bottom:6px;margin-top:30px;}\n';
+    h+='h3{font-size:17px;margin-top:22px;}\n';
+    h+='p{text-indent:2em;margin-bottom:16px;}\n';
+    h+='img{max-width:100%;height:auto;display:block;margin:20px auto;}\n';
+    h+='.fig-cap{font-size:13px;color:#555;text-align:center;margin-bottom:20px;}\n';
+    h+='.meta{color:#555;font-size:14px;margin-bottom:30px;text-align:center;}\n';
+    h+='.tags{text-align:center;margin-bottom:30px;}\n';
+    h+='.tag{display:inline-block;padding:2px 8px;border:1px solid #ddd;font-size:12px;margin:2px;color:#666;}\n@media print{body{padding:0}}\n</style>\n</head>\n<body>\n<div class="container">\n';
+
+    var article=document.querySelector('article');
+    h+='<h1>'+title+'</h1>\n';
+    var meta=article.querySelector('.article-meta');
+    if(meta) h+='<div class="meta">'+meta.innerHTML+'</div>\n';
+
+    var sections=article.querySelectorAll('section');
+    for(var i=0;i<sections.length;i++){
+      var h2=sections[i].querySelector('h2');
+      if(h2) h+='<h2>'+h2.textContent+'</h2>\n';
+      var h3s=sections[i].querySelectorAll('h3');
+      var hi=0;
+      var ps=sections[i].querySelectorAll('p');
+      for(var j=0;j<ps.length;j++){
+        while(hi<h3s.length && h3s[hi].compareDocumentPosition(ps[j]) & Node.DOCUMENT_POSITION_PRECEDING){
+          h+='<h3>'+h3s[hi].textContent+'</h3>\n'; hi++;
+        }
+        h+='<p>'+ps[j].innerHTML+'</p>\n';
+      }
+      while(hi<h3s.length){ h+='<h3>'+h3s[hi].textContent+'</h3>\n'; hi++; }
+      var figs=sections[i].querySelectorAll('.figure-box');
+      for(var k=0;k<figs.length;k++){
+        var img=figs[k].querySelector('img');
+        if(img) h+='<img src="'+img.src+'" alt="'+img.alt+'">\n';
+        var cap=figs[k].querySelector('.caption');
+        if(cap) h+='<p class="fig-cap">'+cap.innerHTML+'</p>\n';
+      }
+    }
+    h+='</div>\n</body>\n</html>';
+
+    var blob=new Blob([h],{type:'text/html;charset=utf-8'});
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement('a');
+    a.href=url;
+    a.download=title+'.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    btn.classList.remove('loading');
+    btn.textContent='下载带图完整文章';
+  },200);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+- class_name: 关于页
+  subtitle: 那荒诞而幼稚的梦可笑吗
+  avatarImg: https://pic1.imgdb.cn/item/67c805efd0e0a243d40c8957.jpg
+  avatarSkills:
+    left:
+      - 🤖️
+      - 🤡
+      - 😡
+      - 🤓
+    right:
+      - 🫵
+      - 👆
+      - 👉
+      - 🤣
+  name: Sancho
+  description: 是 La Sangre de Sancho 的 Sancho
+  aboutsiteTips:
+    tips: 想要
+    title1: 努力
+    title2: 最后能够 整天
+    word:
+      - 睡觉
+      - 睡觉
+      - 睡觉
+      - 还是睡觉！
+  helloAbout: Hi Visitors
+  skillsTips:
+    tips: 最擅长
+    title: 随时随地，一睡到底
+  careers:
+    tips: 生涯
+    title: 正在努力，走向死亡
+    list:
+      - desc: 前面的区域
+        color: "#357ef5"
+      - desc: 以后再
+        color: "#357ef5"
+      - desc: 来探索吧
+        color: "#357ef5"
+    img: https://bu.dusays.com/2023/04/21/644287166329b.png
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，北京市
+    background: https://pic1.imgdb.cn/item/67cbaac3066befcec6e090d4.png
+    backgroundDark: https://pic1.imgdb.cn/item/67cbaac2066befcec6e090d1.png
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2006
+    selfInfoTips2: 北京大学
+    selfInfoContent2: 心理与认知科学学院
+    selfInfoTips3: 现在职业
+    selfInfoContent3: 大一学生👨‍🎓
+  personalities:
+    author_name: 提倡者
+    personality_type: INFJ-T
+    photo_url: https://pic1.imgdb.cn/item/67cbac41066befcec6e09281.png
+    personality_img: https://pic1.imgdb.cn/item/67ca7630066befcec6dfc0ee.png
+    name_url: https://www.16personalities.com/ch/infj-人格
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 直面过去，
+    maxim_bottom: 创造未来。
+  buff:
+    buff_tips: 特长（？）
+    buff_top: ⚡️你说你不想在这里⚡️
+    buff_bottom: ⚡️我也不想在这里⚡️
+  game:
+    game_tips: 爱好游戏
+    game_title: 崩坏：星穹铁道
+    game_uid: "UID: 我忘记了"
+    game_bg: https://pic1.imgdb.cn/item/67df8f4f88c538a9b5c4c3a3.webp
+  comic:
+    comic_tips: 偶尔也看一些番
+    comic_title: 追番
+    comic_list:
+      - name: 鲤氏侦探事务所
+        href: https://www.bilibili.com/bangumi/media/md28351529
+        cover: https://pic1.imgdb.cn/item/67df8f5288c538a9b5c4c3b0.png
+      - name: 万圣街
+        href: https://www.bilibili.com/bangumi/media/md28235589
+        cover: https://pic1.imgdb.cn/item/67df8f5088c538a9b5c4c3a9.jpg
+      - name: 紫罗兰永恒花园
+        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
+      - name: 鬼灭之刃
+        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
+      - name: JOJO的奇妙冒险 黄金之风
+        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://pic1.imgdb.cn/item/67df8f5088c538a9b5c4c3aa.png
+  like:
+    like_tips: 关注偏好
+    like_title: 心理学，生命科学
+    like_bg: https://pic1.imgdb.cn/item/67df918688c538a9b5c4c832.jpg
+    like_bottom: 21世纪是（  ）的世纪
+  music:
+    music_tips: 音乐偏好
+    music_title: Project Mili、草东没有派对、回春丹、DOUDOU
+    music_bg: https://pic1.imgdb.cn/item/67df906c88c538a9b5c4c5a6.jpg
+    music_link: /music
+  # reward_list:
+    # - name: 海阔蓝
+    #   amount: 8.8
+    #   datatime: 2023-03-28
+    # - name: LK66
+    #   amount: 66.6
+    #   datatime: 2023-03-24
+    # - name: 张时貳
+    #   amount: 6.6
+    #   datatime: 2023-01-22
+    # - name: ZeroAf
+    #   amount: 9.9
+    #   datatime: 2022-12-14
+    # - name: LuckyWangXi
+    #   amount: 6.6
+    #   datatime: 2022-12-14
+    # - name: 刀中日月长
+    #   amount: 10
+    #   datatime: 2022-11-16
+    # - name: 鹿啵包
+    #   amount: 10
+    #   datatime: 2022-11-08
+    # - name: 疾速k
+    #   amount: 50
+    #   datatime: 2022-09-20
+    # - name: 伴舟先生大霖子
+    #   amount: 4.03
+    #   datatime: 2022-10-27
+    #   suffix: 贝壳
+    # - name: Magica_0x0
+    #   amount: 3.36
+    #   datatime: 2022-10-07
+    #   suffix: 贝壳
+    # - name: 名字就是要短像这样
+    #   amount: 3.36
+    #   datatime: 2022-08-25
+    #   suffix: 贝壳
+    # - name: Leviathan520
+    #   amount: 1.34
+    #   datatime: 2022-08-23
+    #   suffix: 贝壳
+    # - name: 托马斯
+    #   amount: 10
+    #   datatime: 2022-08-19
+    # - name: 哇是猫猫欸
+    #   amount: 1.34
+    #   datatime: 2022-08-19
+    #   suffix: 贝壳

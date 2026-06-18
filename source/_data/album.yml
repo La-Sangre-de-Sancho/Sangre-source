@@ -1,0 +1,43 @@
+- class_name: 世界
+  path_name: /wordScenery
+  type: 2
+  description: 即使殊途同归，也要尽可能捕捉世界🌇
+  cover: https://pic1.imgdb.cn/item/67c9e6a0066befcec6df5ac0.jpg
+  top_background: https://pic1.imgdb.cn/item/67c9e742066befcec6df5ad6.jpg
+  rowHeight: 220
+  limit: 10
+  lazyload: true
+  btnLazyload: false
+  url: false
+  top_link: /album
+  top_btn_text: 返回
+  album_list:
+    - date: 2025/3/7 01:00:00
+      content: 猫喵猫喵猫猫喵！
+      address: 北京市·北京大学
+      from: 吸猫的桑丘
+      image:
+        - https://pic1.imgdb.cn/item/67c9e792066befcec6df5add.jpg
+        - https://pic1.imgdb.cn/item/67c9e959066befcec6df5b0b.jpg
+        - https://pic1.imgdb.cn/item/67c9e972066befcec6df5b11.jpg
+        - https://pic1.imgdb.cn/item/67c9e990066befcec6df5b15.jpg
+        - https://pic1.imgdb.cn/item/67c9e984066befcec6df5b14.jpg
+
+- class_name: 日常
+  path_name: /dailyPhoto
+  type: 1
+  description: 生活的碎片🎆
+  top_link: /album
+  top_btn_text: 返回
+  top_background: https://pic1.imgdb.cn/item/67c9ec84066befcec6df5b5e.jpg
+  cover: https://pic1.imgdb.cn/item/67c9eb93066befcec6df5b43.jpg
+  album_list:
+    - date: 2025-01-08
+      content: ❄️落雪前夜❄️
+      image:
+        - https://pic1.imgdb.cn/item/67c9ecb7066befcec6df5b6a.jpg
+        - https://pic1.imgdb.cn/item/67c9ee41066befcec6df5b96.jpg
+        - https://pic1.imgdb.cn/item/67c9ee09066befcec6df5b8c.jpg
+        - https://pic1.imgdb.cn/item/67c9ee34066befcec6df5b94.jpg
+        - https://pic1.imgdb.cn/item/67c9ee4d066befcec6df5b98.jpg
+        - https://pic1.imgdb.cn/item/67c9ee5f066befcec6df5b9a.jpg
