@@ -22,6 +22,7 @@ menu:
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
   娱乐:
     四方城: /game/index.html || fa-solid fa-gamepad
+    LCTI: /game/lcti/ || fa-solid fa-compass
 
 # nav相关配置
 nav:
