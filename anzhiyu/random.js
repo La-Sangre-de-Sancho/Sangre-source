@@ -1,3 +1,3 @@
-var posts=["2025/03/15/Psychological Statistics_2/","2025/03/03/article-title/","2026/03/09/Fungi/","2025/03/04/Round-and-Round-We-Go/","2025/04/08/dishijiuzhang/","2025/04/20/canmou/","2026/06/18/hello-world/","2026/06/18/lcti-launch/","2025/03/03/xiaoshiji1/","2025/03/03/xiaoshiji2/","2025/03/22/xiaoshiji3/","2025/03/08/yibairihou/"];function toRandomPost(){
+var posts=["2026/03/09/Fungi/","2025/03/15/Psychological Statistics_2/","2025/03/04/Round-and-Round-We-Go/","2025/03/03/article-title/","2025/04/20/canmou/","2025/04/08/dishijiuzhang/","2026/06/18/hello-world/","2026/06/18/lcti-launch/","2025/03/03/xiaoshiji1/","2025/03/03/xiaoshiji2/","2025/03/22/xiaoshiji3/","2025/03/08/yibairihou/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
