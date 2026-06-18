@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>LCTI · 历城二中人格测试</title>
+<meta name="description" content="历城二中人格测试（LCTI）——基于四维十六型的人格测评工具。勤怠、顺逆、信疑、群独，测测你在钟儿城里是哪一种人。">
+<meta name="keywords" content="历城二中, LCTI, 人格测试, MBTI, 勤志文化, 钟儿城里">
+<meta property="og:title" content="LCTI · 历城二中人格测试">
+<meta property="og:description" content="勤怠·顺逆·信疑·群独——四维十六型，测测你在钟儿城里是哪一种人。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://la-sangre-de-sancho.github.io/game/lcti/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://la-sangre-de-sancho.github.io/game/lcti/">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  background:#0a0a0c;
+  color:#c8c3bc;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1.7;
+  overflow-x:hidden
+}
+::selection{background:#8b7355;color:#f0ebe3}
+.container{
+  width:100%;max-width:680px;min-height:100vh;
+  padding:2rem 1.5rem;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  position:relative
+}
+h1{font-size:2.4rem;font-weight:300;letter-spacing:.15em;color:#e8e0d6;margin-bottom:.3rem}
+h1 strong{font-weight:600;color:#d4a853}
+h2{font-size:1.1rem;font-weight:300;letter-spacing:.3em;color:#8b7e6e;margin-bottom:2rem}
+p{font-size:.95rem;color:#a89e92;text-align:center;max-width:520px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.9rem 2.2rem;border:1px solid #3a3530;background:transparent;color:#c8c3bc;
+  font-size:.9rem;font-family:inherit;cursor:pointer;transition:all .3s ease;
+  letter-spacing:.08em;text-decoration:none;min-width:200px
+}
+.btn:hover{background:#1a1815;border-color:#8b7355;color:#e8e0d6}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:#2a2520;border-color:#5a5044;color:#e8e0d6}
+.btn-primary:hover{background:#3a3530;border-color:#d4a853}
+.btn-secondary{border-color:#2a2520;color:#8b7e6e;font-size:.8rem;min-width:auto;padding:.6rem 1.2rem}
+.btn-secondary:hover{border-color:#5a5044;color:#c8c3bc}
+.screen{display:none;width:100%;animation:fadeIn .5s ease}
+.screen.active{display:flex;flex-direction:column;align-items:center;gap:1.8rem}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)}}
+.progress-wrap{width:100%;margin-bottom:.5rem}
+.progress-label{display:flex;justify-content:space-between;font-size:.75rem;color:#5a5248;margin-bottom:.4rem}
+.progress-bar{width:100%;height:2px;background:#1a1815;overflow:hidden}
+.progress-fill{height:100%;width:0%;background:#8b7355;transition:width .5s cubic-bezier(.22,.61,.36,1)}
+.question-counter{font-size:.75rem;color:#5a5248;letter-spacing:.1em}
+.question-text{font-size:1.1rem;color:#e8e0d6;text-align:center;line-height:1.8;margin:.5rem 0;font-weight:300}
+.dimension-tag{
+  display:inline-block;font-size:.65rem;letter-spacing:.15em;
+  padding:.2rem .7rem;border:1px solid #3a3530;color:#8b7e6e;margin-bottom:.3rem
+}
+.options{display:flex;flex-direction:column;gap:.6rem;width:100%;max-width:480px}
+.option-btn{
+  width:100%;padding:1rem 1.2rem;border:1px solid #2a2520;background:#0f0f11;
+  color:#b0a89c;font-size:.9rem;font-family:inherit;cursor:pointer;text-align:left;
+  transition:all .25s ease;line-height:1.5
+}
+.option-btn:hover{border-color:#5a5044;background:#161418;color:#e8e0d6}
+.option-btn.selected{border-color:#8b7355;background:#1a1815;color:#e8e0d6}
+.option-btn .option-label{display:inline-block;color:#5a5248;margin-right:.6rem;font-size:.75rem}
+.result-type{font-size:3rem;font-weight:700;letter-spacing:.35em;color:#d4a853;text-align:center;margin:1rem 0 .5rem;line-height:1.2}
+.result-name{font-size:1.5rem;font-weight:300;letter-spacing:.15em;color:#e8e0d6;text-align:center;margin-bottom:1rem}
+.result-dimensions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.result-dim{font-size:.7rem;letter-spacing:.12em;padding:.3rem .8rem;border:1px solid #3a3530;color:#8b7e6e}
+.result-dim span{color:#d4a853}
+.result-desc{font-size:.88rem;color:#a89e92;text-align:center;max-width:480px;line-height:1.9;margin-bottom:1.2rem}
+.result-quote{font-size:.78rem;color:#5a5248;font-style:italic;text-align:center;border-left:2px solid #3a3530;padding-left:1rem;max-width:420px;margin-bottom:2rem;line-height:1.7}
+.result-actions{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+.dimension-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem;width:100%;max-width:400px;margin:.5rem 0}
+.dim-item{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#8b7e6e;letter-spacing:.08em;padding:.2rem 0}
+.dim-item .dim-left{color:#c8c3bc}.dim-item .dim-right{color:#5a5248}.dim-sep{color:#3a3530;font-size:.6rem}
+.splash-icon{font-size:3rem;color:#3a3530;letter-spacing:.3em;margin-bottom:1rem;opacity:.4}
+.splash-icon span{display:inline-block;animation:pulse 2s ease-in-out infinite}
+.splash-icon span:nth-child(2){animation-delay:.2s}
+.splash-icon span:nth-child(3){animation-delay:.4s}
+.splash-icon span:nth-child(4){animation-delay:.6s}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+.footer-text{font-size:.65rem;color:#2a2520;margin-top:2rem;text-align:center;letter-spacing:.05em}
+.footer-text a{color:#3a3530;text-decoration:none}
+.footer-text a:hover{color:#5a5044}
+.confetti-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden}
+.confetti-piece{
+  position:absolute;width:6px;height:6px;opacity:0;
+  animation:confettiFall linear forwards
+}
+@keyframes confettiFall{
+  0%{opacity:1;transform:translateY(-10px) rotate(0deg)}
+  100%{opacity:0;transform:translateY(100vh) rotate(720deg)}
+}
+@media(max-width:480px){
+  .container{padding:1.5rem 1rem}
+  h1{font-size:1.8rem}
+  .result-type{font-size:2.2rem;letter-spacing:.25em}
+  .result-name{font-size:1.2rem}
+  .question-text{font-size:.95rem}
+  .option-btn{font-size:.82rem;padding:.85rem 1rem}
+  .btn{min-width:160px;padding:.75rem 1.5rem}
+}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#0a0a0c}
+::-webkit-scrollbar-thumb{background:#2a2520}
+</style>
+</head>
+<body>
+<div class="container" id="app">
+  <!-- INTRO -->
+  <div class="screen active" id="screen-intro">
+    <div class="splash-icon"><span>钟</span><span>儿</span><span>城</span><span>里</span></div>
+    <h1><strong>LCTI</strong></h1>
+    <h2>历城二中人格测试</h2>
+    <div class="dimension-grid">
+      <div class="dim-item"><span class="dim-left">勤</span><span class="dim-sep">/</span><span class="dim-right">怠</span></div>
+      <div class="dim-item"><span class="dim-left">顺</span><span class="dim-sep">/</span><span class="dim-right">逆</span></div>
+      <div class="dim-item"><span class="dim-left">信</span><span class="dim-sep">/</span><span class="dim-right">疑</span></div>
+      <div class="dim-item"><span class="dim-left">群</span><span class="dim-sep">/</span><span class="dim-right">独</span></div>
+    </div>
+    <p>四维十六型，测测你在钟儿城里是哪一种人。</p>
+    <div style="margin-top:.5rem"></div>
+    <button class="btn btn-primary" onclick="startTest()">开始测试</button>
+    <div class="footer-text">基于 Sangre-source · 共 12 题</div>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="screen" id="screen-quiz">
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="qLabel">1 / 12</span>
+        <span id="dimLabel" class="dimension-tag">勤怠</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <div class="question-text" id="questionText"></div>
+    <div class="options" id="optionsContainer"></div>
+  </div>
+
+  <!-- RESULT -->
+  <div class="screen" id="screen-result">
+    <div class="result-type" id="resultCode">QNYD</div>
+    <div class="result-name" id="resultName">剑客</div>
+    <div class="result-dimensions" id="resultDims"></div>
+    <div class="result-desc" id="resultDesc"></div>
+    <div class="result-quote" id="resultQuote"></div>
+    <div class="result-actions">
+      <button class="btn btn-primary" onclick="shareResult()">分享结果</button>
+      <button class="btn btn-secondary" onclick="restartTest()">重新测试</button>
+      <button class="btn btn-secondary" onclick="viewTypes()">查看全部类型</button>
+    </div>
+    <div class="footer-text"><a href="https://la-sangre-de-sancho.github.io" target="_blank" rel="noopener">← 回到博客</a></div>
+  </div>
+
+  <!-- ALL TYPES -->
+  <div class="screen" id="screen-types">
+    <h2 style="margin-bottom:1.5rem">十六种类型</h2>
+    <div id="typesGrid" style="width:100%"></div>
+    <button class="btn btn-secondary" onclick="showScreen('screen-result')" style="margin-top:1.5rem">← 返回结果</button>
+    <button class="btn btn-secondary" onclick="restartTest()" style="margin-top:.6rem">重新测试</button>
+  </div>
+</div>
+
+<script>
+const DIMS = [
+  { id:'qin',  label:'勤怠', left:'勤', right:'怠' },
+  { id:'shun', label:'顺逆', left:'顺', right:'逆' },
+  { id:'xin',  label:'信疑', left:'信', right:'疑' },
+  { id:'qun',  label:'群独', left:'群', right:'独' }
+];
+const QUESTIONS = [
+  { q:'看到别人在自习课上拼命刷题，你会？', dim:'qin',  a:'感到焦虑，立刻也拿出题来做',        b:'觉得他们太卷了，继续做自己的事' },
+  { q:'对于"不苦不成材"这句话，你的态度是？', dim:'qin',  a:'深以为然，痛苦是成长的必经之路',     b:'不以为然，健康和快乐比什么都重要' },
+  { q:'如果一整天完全没有学习，你会？',        dim:'qin',  a:'产生强烈的负罪感，坐立不安',         b:'觉得偶尔彻底放松一下很正常' },
+  { q:'当学校的规定让你感到不合理时，你会？',  dim:'shun', a:'虽然不满，但还是会遵守',             b:'想办法绕开规定，或者直接质疑' },
+  { q:'对于"男女生不正常交往"这种检查，你怎么看？', dim:'shun', a:'学校也是为学生好，避免早恋影响学习', b:'这完全是过度干预，侵犯正常社交' },
+  { q:'如果督查老师因为一件小事批评你，你会？', dim:'shun', a:'认错道歉，息事宁人',               b:'据理力争，不认为自己有错' },
+  { q:'学校公众号推送的"学霸经验分享"，你觉得？', dim:'xin', a:'很励志，可以作为学习榜样',         b:'多半经过包装和删改，真实存疑' },
+  { q:'对于"勤志文化"的宣传，你的感受是？',    dim:'xin',  a:'它确实激励了许多人，有其正面意义',   b:'它更像一种精神控制和宣传话术' },
+  { q:'当听到"你们要感恩母校"时，你内心？',    dim:'xin',  a:'心怀感激，母校确实给了我很多',       b:'心情复杂，感恩应由个人经历决定' },
+  { q:'在集体中，你更倾向于？',                dim:'qun',  a:'融入集体，和大家保持一致',           b:'保持自我，不因集体而改变' },
+  { q:'对于"少数服从多数"这个原则，你？',      dim:'qun',  a:'认同，这是维护集体和谐的必要原则',   b:'警惕，多数不一定正确' },
+  { q:'在宿舍里，你通常是？',                  dim:'qun',  a:'和室友一起行动，喜欢热闹',           b:'独来独往，需要自己的空间' }
+];
+const TYPES = {
+  'QSXQ':{ name:'拓疆者',
+    desc:'你是学校引以为傲的典范——勤勉、顺从、笃信、合群。你相信天道酬勤，遵守一切规则，信任官方叙事，并在集体中找到归属感。你是"勤志文化"最完美的注脚，是那株被精心培育、最终开出标准花朵的植物。你的道路清晰而笔直，每一步都踩在学校的节拍上。',
+    quote:'"越早进入这条轨道，就越能在高考的独木桥上占据先机。"' },
+  'QSXD':{ name:'孤灯',
+    desc:'你拥有学校欣赏的一切品质，唯独习惯独行。你认真、听话、信念坚定，却在深夜里独自亮着灯。集体荣誉榜上有你的名字，但集体活动里很少见到你的身影。你在千篇一律的试卷中寻找属于自己的微小进步空间。',
+    quote:'"在千篇一律的试卷和排名图景下，寻找自己微小的进步空间。"' },
+  'QSYQ':{ name:'迷途',
+    desc:'你做着所有正确的事：努力学习、遵守纪律，和朋友们保持着良好关系。但你内心深处藏着一丝怀疑——那些官方叙事和你的真实体验之间，似乎隔着一层透明的墙。你和朋友们私下交换着心照不宣的眼神，在勤志的洪流中小心保持着清醒。',
+    quote:'"我那时便向往起外面的生活来，甚至有些想住进对面的屋子。"' },
+  'QSYD':{ name:'暗流',
+    desc:'你按照规则行事，比谁都努力，但你的心并不在这个系统里。你看穿了那些精心编织的叙事，却依然沉默地配合着。你像一条地下的暗流——表面上波澜不惊，内心深处却汹涌着怀疑与疏离。',
+    quote:'"我终于能在软床上好梦了。可是我丢了一部分，丢在那四方城里。"' },
+  'QNXQ':{ name:'狂徒',
+    desc:'你精力充沛、勤奋刻苦，信仰自己的理想而非权威的命令。你是制度内部最忠诚的反对者——相信学校的使命，但痛恨它的执行方式。你会为了你认为正确的事情振臂高呼，这是一种危险的组合：信仰加上反叛。',
+    quote:'"这或许也是最让人气愤的一点。"' },
+  'QNXD':{ name:'骑士',
+    desc:'你信奉努力的价值，有着自己的道德准则，但不为任何群体所绑架。你是独行的骑士：勤勉于自己的追求，桀骜于不公的权威，忠诚于内心的信念。你的剑只为自己相信的东西出鞘。',
+    quote:'"我自认我并不是一个多有素质的人。"' },
+  'QNYQ':{ name:'破钟',
+    desc:'你勤奋、怀疑、反抗——并且这一切都与你的朋友们一起。你是那面裂了却依然轰鸣的钟，声音嘶哑但传得最远。你和你的同志们彼此看见，彼此确认，在被修剪的校园里做未被修剪的人。',
+    quote:'"我们总会听到千篇一律的美称……可我们究竟该信些什么？"' },
+  'QNYD':{ name:'剑客',
+    desc:'孤独的求索者。你勤于思考，逆于权威，疑于叙事，独于人群。你像一个独行的剑客，用笔做刀，剖开那些精心包装的谎言。你的文字曾被删除，你的声音曾被消音，但火焰在你心中从未熄灭。',
+    quote:'"可那灵魂所经历的，确是事实，却不是历史。那是不被承认、无法记录的。"' },
+  'DSXQ':{ name:'暖阳',
+    desc:'温和、知足、合群——你是集体中的暖阳。不过分苛求自己，遵守规则，相信世间的善意，被朋友们包围着。你证明了在这样一所高压的学校里，仍可以以一种松弛的姿态存活。',
+    quote:'"我们这些互相咒骂的，这也称得上是颇为可笑了。"' },
+  'DSXD':{ name:'隐士',
+    desc:'你低着头，相信着系统，不问是非，只求安宁。不好高骛远，不叛逆，不质疑——只是在围墙之内安静地过自己的日子。隐士在牢笼中也能找到内心的平静。',
+    quote:'"我毕竟是算不上人物的。我只好安分地埋葬了自己三年。"' },
+  'DSYQ':{ name:'清醒',
+    desc:'你没有那么拼，也没有那么听话——但你有一起看透这一切的朋友。你和你的朋友构成了学校里一条隐秘的暗线：清醒、松弛、彼此确认。你们用玩笑消解着荒谬。',
+    quote:'"可惜的是，有些记忆并不被允许拥有长久的未来。"' },
+  'DSYD':{ name:'旁观',
+    desc:'疏离而清醒。你不信这套系统，但也懒得和它较劲。你见过太多真相以至于不再天真，但也疲惫到不愿举起旗帜。你站在人群之外，像看一场荒诞剧一样看着校园生活在你面前展开。',
+    quote:'"愤而哂笑之余，想到一句贵校常说的话。"' },
+  'DNXQ':{ name:'侠客',
+    desc:'你相信某些东西——只是不信学校灌输的那套。你和你的朋友们一起，以戏谑和反叛对抗僵硬的制度。你们不把生活看得太严肃，但把彼此看得很重。你们在密不透风的纪律中为自己和朋友们开辟出一片自由的飞地。',
+    quote:'"三流学校管纪律。"' },
+  'DNXD':{ name:'浪人',
+    desc:'一个不让任何人驯服的灵魂。你不接受被定义，拒绝了系统的所有馈赠。你像一阵风穿过校园，不属于任何班级、任何小团体、任何叙事。你是无主的浪人，自由但孤独，纯粹但漂泊。',
+    quote:'"我拖着我的躯体，却丢失了我的声带。我对着这四方城怒吼，却只有喧嚣的风声。"' },
+  'DNYQ':{ name:'火种',
+    desc:'你和你的朋友们一起：厌倦着谎言，反抗着权威，质疑着一切。你们不寻求来自学校的认可——你们只寻求彼此的认可。你们是散落在学校各处的微小火种，每一次眼神的交换都是一次引燃。',
+    quote:'"当那些颐指气使的叫兽用古典的思维指挥我们时，我的一部分也被磨搓下来。"' },
+  'DNYD':{ name:'游离',
+    desc:'最终的局外人。你已超脱了整个游戏——既不勤奋，也不顺从；既不笃信，也不合群。因为彻底放下，所以彻底自由。你从围墙之外回望这所学校，看清它真正的面目：一台吞噬青春、产出数字的机器。',
+    quote:'"有些人殚精竭虑，日积月累写下那些文字……这对他已经没有任何好处。"' }
+};
+const POLE_KEYS = { qin:{left:'Q',right:'D'}, shun:{left:'S',right:'N'}, xin:{left:'X',right:'Y'}, qun:{left:'Q',right:'D'} };
+const DIM_KEYS = ['qin','shun','xin','qun'];
+
+let currentQ = 0;
+let answers  = { qin:[], shun:[], xin:[], qun:[] };
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function startTest(){
+  currentQ = 0;
+  answers = { qin:[], shun:[], xin:[], qun:[] };
+  showScreen('screen-quiz');
+  renderQuestion();
+}
+function renderQuestion(){
+  if(currentQ >= QUESTIONS.length){ finishTest(); return; }
+  const q = QUESTIONS[currentQ];
+  const total = QUESTIONS.length;
+  const pct = (currentQ / total * 100).toFixed(0);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('qLabel').textContent = (currentQ+1) + ' / ' + total;
+  const dimInfo = DIMS.find(d => d.id === q.dim);
+  document.getElementById('dimLabel').textContent = dimInfo.label;
+  document.getElementById('questionText').textContent = q.q;
+  const container = document.getElementById('optionsContainer');
+  container.innerHTML = '';
+  [{l:'A',t:q.a,v:'left'},{l:'B',t:q.b,v:'right'}].forEach(o=>{
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = '<span class="option-label">'+o.l+'</span> '+o.t;
+    btn.onclick = ()=>selectAnswer(o.v);
+    container.appendChild(btn);
+  });
+}
+function selectAnswer(val){
+  answers[QUESTIONS[currentQ].dim].push(val);
+  currentQ++;
+  renderQuestion();
+}
+function calcResult(){
+  let code = '';
+  DIM_KEYS.forEach(d=>{
+    const a=answers[d];
+    code += (a.filter(v=>v==='left').length >= a.filter(v=>v==='right').length) ? POLE_KEYS[d].left : POLE_KEYS[d].right;
+  });
+  return code;
+}
+function finishTest(){
+  const code = calcResult();
+  const type = TYPES[code] || TYPES['QNYD'];
+  const arr = code.split('');
+  document.getElementById('resultCode').innerHTML = arr.map((c,i)=>{
+    const dim=DIMS[i];
+    const isLeft=c===POLE_KEYS[dim.id].left;
+    return '<span style="color:'+(isLeft?'#d4a853':'#8b7e6e')+'">'+c+'</span>';
+  }).join('');
+  document.getElementById('resultName').textContent = type.name;
+  document.getElementById('resultDesc').textContent = type.desc;
+  document.getElementById('resultQuote').textContent = type.quote;
+  document.getElementById('resultDims').innerHTML = DIMS.map((d,i)=>{
+    const c=arr[i];
+    const isLeft=c===POLE_KEYS[d.id].left;
+    const fillL=isLeft?'●':'○', fillR=isLeft?'○':'●';
+    return '<div class="result-dim">'+d.label+': <span style="color:'+(isLeft?'#d4a853':'#8b7e6e')+'">'+d.left+fillL+' / '+d.right+fillR+'</span></div>';
+  }).join('');
+  showScreen('screen-result');
+  spawnConfetti();
+  const url=new URL(window.location);
+  url.searchParams.set('type',code);
+  window.history.replaceState({},'',url);
+}
+function spawnConfetti(){
+  const c=document.createElement('div');c.className='confetti-container';
+  const cl=['#d4a853','#8b7355','#5a5044','#c8c3bc','#e8e0d6','#3a3530'];
+  for(let i=0;i<40;i++){
+    const e=document.createElement('div');e.className='confetti-piece';
+    e.style.left=Math.random()*100+'%';e.style.background=cl[Math.floor(Math.random()*cl.length)];
+    e.style.width=(3+Math.random()*4)+'px';e.style.height=(3+Math.random()*4)+'px';
+    e.style.borderRadius=Math.random()>.5?'50%':'0';
+    e.style.animationDuration=(2+Math.random()*3)+'s';e.style.animationDelay=Math.random()*1.5+'s';
+    c.appendChild(e);
+  }
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),5000);
+}
+function shareResult(){
+  const code=calcResult();
+  const type=TYPES[code];
+  const t='我测出的LCTI类型是：'+code+' · '+type.name+'\n\n'+type.quote+'\n\n你也来试试：https://la-sangre-de-sancho.github.io/game/lcti/';
+  if(navigator.share){ navigator.share({title:'LCTI · 历城二中人格测试',text:t,url:'https://la-sangre-de-sancho.github.io/game/lcti/'}).catch(()=>{}); }
+  else {
+    navigator.clipboard.writeText(t).then(()=>{
+      const b=document.querySelector('.result-actions .btn-primary');
+      const orig=b.textContent; b.textContent='已复制 ✓';
+      setTimeout(()=>b.textContent=orig,2000);
+    }).catch(()=>{});
+  }
+}
+function restartTest(){
+  const u=new URL(window.location);
+  u.searchParams.delete('type');
+  window.history.replaceState({},'',u);
+  startTest();
+}
+function viewTypes(){
+  const g=document.getElementById('typesGrid');g.innerHTML='';
+  Object.entries(TYPES).forEach(([c,t])=>{
+    const d=document.createElement('div');
+    d.style.cssText='border:1px solid #1a1815;padding:1rem;margin-bottom:.5rem;cursor:pointer;transition:.2s';
+    d.onmouseenter=()=>{d.style.borderColor='#3a3530';d.style.background='#0f0f11';};
+    d.onmouseleave=()=>{d.style.borderColor='#1a1815';d.style.background='transparent';};
+    d.innerHTML='<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:1.2rem;font-weight:600;letter-spacing:.25em;color:#d4a853">'+c+'</span><span style="font-size:.9rem;color:#8b7e6e;letter-spacing:.1em">'+t.name+'</span></div><div style="font-size:.75rem;color:#5a5248;margin-top:.3rem;line-height:1.5">'+t.desc.slice(0,80)+'…</div>';
+    g.appendChild(d);
+  });
+  showScreen('screen-types');
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  const p=new URLSearchParams(window.location.search);
+  const t=p.get('type');
+  if(t&&TYPES[t]){
+    const a=t.split('');
+    DIM_KEYS.forEach((d,i)=>{answers[d]=[];for(let j=0;j<3;j++)answers[d].push(a[i]===POLE_KEYS[d].left?'left':'right');});
+    finishTest();
+  }
+});
+</script>
+</body>
+</html>

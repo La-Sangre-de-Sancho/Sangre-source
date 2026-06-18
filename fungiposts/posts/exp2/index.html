@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>编码条件和词语类型对再认记忆效果的影响 - 实验心理学</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman','宋体',serif;color:#222;background:#fff;line-height:1.8;font-size:16px}
+.container{max-width:800px;margin:0 auto;padding:40px 24px}
+.article-header{margin-bottom:48px}
+.article-header h1{font-size:28px;font-weight:700;line-height:1.3;margin-bottom:12px;color:#111}
+.article-meta{font-size:14px;color:#666;line-height:1.6;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.tag{display:inline-block;padding:2px 10px;font-size:12px;border:1px solid #ddd;border-radius:3px;color:#666}
+section{margin-bottom:40px}
+h2{font-size:22px;font-weight:700;color:#111;border-bottom:1px solid #e1e1e1;padding-bottom:8px;margin-bottom:20px}
+h3{font-size:18px;font-weight:600;color:#333;margin-top:28px;margin-bottom:12px}
+h4{font-size:16px;font-weight:600;color:#444;margin-top:20px;margin-bottom:10px}
+p{margin-bottom:18px;text-indent:2em}
+.no-indent{text-indent:0}
+i{font-style:italic}
+.abstract p{font-size:15px}
+.abstract strong{color:#a31b2c}
+.figure-box{margin:28px 0;padding:16px;background:#f8f8f8;border:1px solid #e1e1e1;border-radius:4px}
+.figure-box img{display:block;max-width:100%;height:auto;margin:0 auto 12px}
+.figure-box .caption{font-size:13px;color:#666;line-height:1.5;text-indent:0}
+.figure-box .caption strong{color:#222}
+.table-wrap{margin:20px 0;overflow-x:auto}
+.table-wrap table{width:100%;border-collapse:collapse;font-size:14px;text-align:center}
+.table-wrap th{background:#f0f0f0;font-weight:600;border:1px solid #ddd;padding:6px 8px}
+.table-wrap td{border:1px solid #ddd;padding:6px 8px}
+.table-wrap .caption{font-size:13px;color:#555;text-align:center;margin:8px 0 0}
+.download-bar{position:sticky;bottom:0;background:#fff;border-top:1px solid #e1e1e1;padding:12px 0;text-align:center;z-index:100}
+.btn-download{display:inline-block;padding:10px 28px;font-size:15px;font-family:Georgia,serif;background:#a31b2c;color:#fff;border:none;border-radius:4px;cursor:pointer}
+.btn-download:hover{background:#7e1523}
+.btn-download::before{content:"\2193 "}
+.top-link{position:fixed;bottom:80px;right:24px;width:40px;height:40px;background:#f0f0f0;border:1px solid #ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#666;opacity:0;pointer-events:none;text-decoration:none}
+.top-link.visible{opacity:1;pointer-events:auto}
+.top-link:hover{background:#ddd;color:#a31b2c}
+.ref-list{font-size:14px;line-height:1.6}
+.ref-list p{text-indent:0;margin-bottom:6px;padding-left:2em;text-indent:-2em}
+@media(max-width:600px){.container{padding:24px 16px}.article-header h1{font-size:22px}h2{font-size:19px}}
+</style>
+</head><body>
+<div class="container">
+<article>
+<header class="article-header">
+<h1>编码条件和词语类型对再认记忆效果的影响</h1>
+<div class="article-meta">
+<p class="no-indent authors">孟凡璇</p>
+<p class="no-indent"><span class="journal">实验心理学实验报告</span> &middot; 北京大学 &middot; 2025年9月</p>
+<p class="no-indent">同组成员：吴之锦 才定州 王千千 祎紫桐 占佳豪</p>
+</div>
+<div class="tags">
+<span class="tag">实验心理学</span><span class="tag">自我参照效应</span><span class="tag">再认记忆</span><span class="tag">编码条件</span><span class="tag">文化自我</span>
+</div>
+</header>
+
+<section id="abstract" class="abstract">
+<h2>摘要</h2>
+<p><strong>自我参照效应</strong>指记忆材料与自我相关时的记忆效果显著优于其他编码条件。本实验基于 Rogers（1977）自我参照实验范式，采用 4（编码条件：自我参照、母亲参照、名人参照、意义编码）×2（词语类型：褒义、贬义）双因素组内设计，探讨编码条件和词语类型对再认记忆正确率及反应时的影响。结果显示，褒义词条件下自我参照组与母亲参照组再认正确率接近，均显著高于名人参照组和意义编码组；贬义词条件下自我参照组显著高于其他组。反应时分析未发现显著差异。研究表明自我参照效应主要体现在记忆准确性上，并部分支持东方文化背景下母亲参照接近自我参照的假设，同时提示自我概念可能随文化背景和时代发展发生动态重构。</p>
+<p><strong>关键词</strong> 自我参照效应 再认记忆 编码条件 自我概念</p>
+</section>
+
+<section id="introduction">
+<h2>1 前言</h2>
+<p>自我参照效应（self-reference effect, SRE）是指当记忆材料与自我相联系时，记忆效果优于其他编码条件的现象。该现象的研究可追溯到 Craik 和 Tulving（1975）提出的深度加工理论（depth of processing, DOP），该理论认为记忆保持取决于刺激在编码时的加工深度：语义加工优于音韵加工，音韵加工优于结构加工。Rogers 等人（1977）在此基础上将“自我”引入加工范式，设置结构、音韵、语义和自我参照四种编码任务，发现自我参照加工的记忆效果显著优于其他编码条件，甚至超过了 DOP 范式中表现最佳的语义加工，由此提出“自我参照效应”这一概念。</p>
+<p>此后，SRE 成为记忆研究的重要课题，研究者不断扩展该范式。例如，Bower 和 Gilligan（1979）引入他人参照（other-reference, OR）条件，要求被试判断词汇是否适用于描述母亲或名人，以探讨记忆效果是否仅限于与自我相关的加工。研究表明，他人参照通常产生较弱的记忆优势，但在某些文化情境下，母亲参照与自我参照的记忆效果高度相似（朱潮，张力，2001）。这一结果与 Markus 和 Kitayama（1991）提出的文化自我建构理论一致：在东方文化中，自我概念更强调人与社会的相互依存，母亲等亲密他人往往被纳入自我表征之中。fMRI 研究进一步验证了母亲参照和自我参照在中国被试中引发相似的内侧额叶激活模式（张力 等，2005）。</p>
+<p>然而，关于母亲参照是否等同于自我参照，现有研究结论并不完全一致。虽然朱潮和张力（2001）在中国被试中发现二者记忆效应几乎相同，但随着社会现代化与独立自我意识的增强，母亲参照与自我参照之间的差异可能逐渐显现。因此，有必要在严格控制材料和程序的前提下，采用更新的样本和均衡的刺激集，重新检验编码条件和词语类型对再认记忆的影响，以验证母亲参照效应在当代青年样本中的稳定性。</p>
+<p>基于上述局限，本实验在经典 SRE 范式基础上引入母亲参照与名人参照两种他人参照条件，综合考察不同编码条件下的再认正确率与反应时，以期更系统地比较自我参照与他人参照的记忆效果，并探索文化自我建构在其中的可能调节作用。实验预期结果为：（1）自我参照编码的再认正确率和母亲参照的不存在显著差异，但显著高于另外两种参照条件；（2）褒义词的记忆效果优于贬义词；（3）编码条件和词语类型的交互作用显著。</p>
+</section>
+
+<section id="methods">
+<h2>2 方法和设计</h2>
+<h3>2.1 被试</h3>
+<p><i>本实验共招募54名被试，其中男性26名，女性28名，年龄范围18到24岁（M = 19.45，SD = 1.18）。所有被试均为北京大学学生，视力或矫正视力正常。本实验为课堂教学实验，所有被试获得相应学分作为报酬。</i></p>
+<h3>2.2 材料和仪器</h3>
+<p>实验配有统一型号的台式电脑以及统一的键盘，供被试进行按键反应。电脑的基本型号参数如下：显示器型号：24英寸 TITAN ARMY 液晶显示器；分辨率：1920×1080；刷新频率：60Hz；操作系统：Windows10。本实验程序基于 MATLAB R2022b 软件完成，程序使用 320 个人格特质形容词作为实验材料，其中学习词汇 160 个（其中褒义、贬义各 80 个），混淆词汇 160 个（其中褒义、贬义各 80 个）。</p>
+<h3>2.3 实验设计</h3>
+<p>本实验采用 4（编码条件：自我参照、母亲参照、名人参照、意义编码）×2（词语类型：褒义、贬义）双因素组内设计，因变量为被试的再认正确率，通过修正的再认正确率（Pr = 击中率 − 虚报率）这一指标来衡量，单位为百分比（%）。</p>
+<p>实验还控制了可能存在的额外变量，包括坐姿、视距、手臂支点位置等，以降低测量误差并提高内部效度。</p>
+<h3>2.4 实验程序</h3>
+<p>实验共有 3 个阶段，依次为学习阶段、干扰阶段、测试阶段。</p>
+<h4>2.4.1 学习阶段</h4>
+<p>学习阶段正式开始前，电脑呈现学习阶段指导语。完成160个试次后，屏幕提示实验结束。学习阶段的部分流程如图1所示。</p>
+<div class="figure-box">
+<img src="./image1.png" alt="图1 学习阶段部分流程图">
+<p class="caption"><strong>图1 学习阶段部分流程图</strong></p>
+</div>
+<h4>2.4.2 干扰阶段</h4>
+<p>在干扰阶段，被试静坐放松休息5分钟。</p>
+<h4>2.4.3 测试阶段</h4>
+<p>测试阶段将学习用词和混淆用词各160个混合并随机呈现，被试需完成混合后的320个试次。测试阶段的部分流程如图2所示。</p>
+<div class="figure-box">
+<img src="./image2.png" alt="图2 测试阶段部分流程图">
+<p class="caption"><strong>图2 测试阶段部分流程图</strong></p>
+</div>
+</section>
+
+<section id="results">
+<h2>3 结果</h2>
+<p>本次实验共收集到了54份数据，经过数据清洗后有51份数据进入分析。</p>
+<h3>3.1 不同编码方式和词语类型对再认正确率的影响</h3>
+<p>为研究不同组合条件下被试的再认正确率，对处理后的再认正确率数据进行 4×2 双因素重复测量方差分析，描述统计如表1所示。</p>
+<div class="table-wrap">
+<table>
+<caption style="font-weight:bold;margin-bottom:6px">表1 不同编码条件和词语类型下的修正的再认正确率（M±SD，单位：%）</caption>
+<thead><tr><th>词语类型</th><th>编码条件</th><th>M±SD</th></tr></thead>
+<tbody>
+<tr><td rowspan="4">褒义词</td><td>自我参照编码</td><td>37.76±17.13</td></tr>
+<tr><td>母亲参照编码</td><td>37.27±11.41</td></tr>
+<tr><td>名人参照编码</td><td>25.41±15.89</td></tr>
+<tr><td>意义编码</td><td>33.55±14.02</td></tr>
+<tr><td rowspan="4">贬义词</td><td>自我参照编码</td><td>38.61±14.64</td></tr>
+<tr><td>母亲参照编码</td><td>29.46±13.54</td></tr>
+<tr><td>名人参照编码</td><td>30.38±14.48</td></tr>
+<tr><td>意义编码</td><td>30.97±13.70</td></tr>
+</tbody>
+</table>
+</div>
+<p><i>方差分析结果显示，编码条件的主效应显著，F(3, 150) = 20.07, p < 0.001, partial η² = 0.286；编码条件与词语类型的交互作用显著，F(3, 150) = 7.15, p < 0.001, partial η² = 0.125。</i></p>
+<div class="figure-box">
+<img src="./image3.png" alt="图3 不同编码条件和词语类型下的修正的再认正确率">
+<p class="caption"><strong>图3 不同编码条件和词语类型下的修正的再认正确率</strong><br>图中误差线为标准误；***p < 0.001, **p < 0.01</p>
+</div>
+<h3>3.2 不同编码方式和词语类型对再认反应时的影响</h3>
+<p>以再认反应时为因变量，进一步采用 4×2 双因素重复测量方差分析。描述性统计如表2所示。</p>
+<div class="table-wrap">
+<table>
+<caption style="font-weight:bold;margin-bottom:6px">表2 不同编码条件和词语类型下的再认反应时（M±SD，单位：s）</caption>
+<thead><tr><th>词语类型</th><th>编码条件</th><th>M±SD</th></tr></thead>
+<tbody>
+<tr><td rowspan="4">褒义词</td><td>自我参照编码</td><td>1.14±0.39</td></tr>
+<tr><td>母亲参照编码</td><td>1.13±0.34</td></tr>
+<tr><td>名人参照编码</td><td>1.24±0.45</td></tr>
+<tr><td>意义编码</td><td>1.17±0.37</td></tr>
+<tr><td rowspan="4">贬义词</td><td>自我参照编码</td><td>1.16±0.26</td></tr>
+<tr><td>母亲参照编码</td><td>1.22±0.33</td></tr>
+<tr><td>名人参照编码</td><td>1.20±0.31</td></tr>
+<tr><td>意义编码</td><td>1.18±0.37</td></tr>
+</tbody>
+</table>
+</div>
+<p><i>方差分析结果显示，编码条件的主效应不显著，F(3, 134) = 1.63, p = 0.189；词语类型的主效应不显著，F(1, 50) = 0.69, p = 0.412。</i></p>
+<div class="figure-box">
+<img src="./image4.png" alt="图4 不同编码条件和词语类型下的再认反应时">
+<p class="caption"><strong>图4 不同编码条件和词语类型下的再认反应时</strong><br>图中误差线为标准误</p>
+</div>
+</section>
+
+<section id="discussion">
+<h2>4 讨论</h2>
+<p>本实验采用 4×2 的双因素组内设计，以修正后的再认正确率和再认反应时为因变量，考察编码条件和词语类型对词语记忆的影响。结果显示自我参照编码显著优于母亲参照、名人参照和意义编码，与自我参照效应理论一致（Rogers et al., 1977）。在褒义词条件下，母亲参照与自我参照表现接近，与朱潮和张力（2001）的发现一致。在再认反应时方面，各条件均未达到显著水平，说明自我参照效应主要体现在记忆的准确性上，而非提取速度。</p>
+<p>实验也存在一些不太符合预期的结果。第一，词语类型对再认正确率影响的主效应不显著。第二，意义编码的再认正确率显著高于名人参照编码，可能涉及到深度加工理论（Craik & Lockhart, 1972）。第三，褒义词条件下自我参照编码显著高于母亲参照编码，与朱潮和张力（2001）的结论相悖，可能反映了当代青年自我概念的动态重构。</p>
+<p>本实验仍有一定局限。有效样本量相对较小（N = 51）；未来可引入 R/K 判断的实验范式，更精确地区分自我参照对不同记忆成分的作用；也可结合脑成像技术探索文化因素如何塑造自我记忆加工。</p>
+<p>综上，本研究验证了自我参照效应的稳健性，同时支持了中国人自我概念中包含母亲成分的假设，并推测这可能与文化背景下自我概念的动态重构有关。</p>
+</section>
+
+<section id="references">
+<h2>参考文献</h2>
+<div class="ref-list">
+<p>张力, 周铁, 张捷, 刘真, 范建, 朱潮. (2005). 寻找中国人的“自我”：一项 fMRI 研究。<i>中国科学（C辑：生命科学）</i>, 35(S1), 68–74.</p>
+<p>朱潮, 张力. (2001). 自我记忆效应的实验研究。<i>中国科学（C辑:生命科学）</i>(06), 537-543.</p>
+<p><i>Bower, G. H., &amp; Gilligan, S. G. (1979). Remembering information related to one's self. Journal of Research in Personality, 13(4), 420–432.</i></p>
+<p><i>Conway, M. A., &amp; Dewhurst, S. A. (1995). The self and recollective experience. Applied Cognitive Psychology, 9(1), 1–19.</i></p>
+<p><i>Craik, F. I. M., &amp; Lockhart, R. S. (1972). Levels of processing: A framework for memory research. Journal of Verbal Learning and Verbal Behavior, 11(6), 671–684.</i></p>
+<p><i>Craik, F. I. M., &amp; Tulving, E. (1975). Depth of processing and the retention of words in episodic memory. Journal of Experimental Psychology: General, 104(3), 268–294.</i></p>
+<p><i>Desjardins, T., &amp; Scoboria, A. (2007). "You and your best friend Suzy set fire to the treehouse": Development and validation of the Memory Characteristics Questionnaire. Applied Cognitive Psychology, 21(8), 1151–1176.</i></p>
+<p><i>Markus, H. R., &amp; Kitayama, S. (1991). Culture and the self: Implications for cognition, emotion, and motivation. Psychological Review, 98(2), 224–253.</i></p>
+<p><i>Rogers, T. B., Kuiper, N. A., &amp; Kirker, W. S. (1977). Self-reference and the encoding of personal information. Journal of Personality and Social Psychology, 35(9), 677–688.</i></p>
+<p><i>Thompson, C. P. (1982). Memory for unique personal events: Effects of pleasantness. Motivation and Emotion, 6(4), 375–385.</i></p>
+<p><i>Warren, L. R., Stein, J. A., &amp; Greaser, M. (1983). The effects of self-reference on recall of trait adjectives. Journal of Personality and Social Psychology, 44(2), 420–428.</i></p>
+<p><i>Zhu, Y., Zhang, L., Fan, J., &amp; Han, S. (2007). Neural basis of cultural influence on self-representation. NeuroImage, 34(3), 1310–1316.</i></p>
+</div>
+</section>
+
+</article>
+</div>
+
+<div class="download-bar">
+<button class="btn-download" onclick="downloadArticle()">下载带图完整文章</button>
+</div>
+
+<a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" id="topLink">&uarr;</a>
+<script>
+var IMG_DATA={};
+var imgNames=["image1.png","image2.png","image3.png","image4.png"];
+
+function fetchAndDownload(){
+  var btn=document.querySelector(".btn-download");
+  btn.classList.add("loading");
+  btn.textContent="准备下载…";
+  Promise.all(imgNames.map(function(n){
+    return fetch(n).then(function(r){return r.blob()}).then(function(b){
+      return new Promise(function(r){
+        var reader=new FileReader();
+        reader.onloadend=function(){IMG_DATA[n]=reader.result;r()};
+        reader.readAsDataURL(b);
+      });
+    });
+  })).then(function(){buildAndDownload()}).catch(function(){buildAndDownload()});
+}
+
+function buildAndDownload(){
+  var title=document.querySelector("h1").textContent;
+  var h="<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"UTF-8\">\n";
+  h+="<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">\n<title>"+title+"</title>\n<style>\n";
+  h+="body{font-family:Georgia,'Times New Roman',serif;color:#222;background:#fff;line-height:1.8;padding:20px}\n";
+  h+=".container{max-width:800px;margin:0 auto}\n";
+  h+="h1{font-size:24px;text-align:center;margin-bottom:6px}\n";
+  h+="h2{font-size:20px;border-bottom:1px solid #ddd;padding-bottom:6px;margin-top:30px}\n";
+  h+="h3{font-size:17px;margin-top:22px}\nh4{font-size:15px;margin-top:18px;font-weight:600}\n";
+  h+="p{text-indent:2em;margin-bottom:16px}\n";
+  h+="img{max-width:100%;height:auto;display:block;margin:20px auto}\n";
+  h+=".fig-cap{font-size:13px;color:#555;text-align:center;margin-bottom:20px}\n";
+  h+=".meta{color:#555;font-size:14px;margin-bottom:30px;text-align:center}\n";
+  h+=".ref-list p{padding-left:2em;text-indent:-2em;font-size:14px;margin-bottom:4px}\n";
+  h+="table{width:100%;border-collapse:collapse;margin:16px auto;font-size:13px}\n";
+  h+="th,td{border:1px solid #ddd;padding:5px 8px;text-align:center}\nth{background:#f0f0f0}\n";
+  h+="@media print{body{padding:0}}\n</style>\n</head>\n<body>\n<div class=\"container\">\n";
+
+  var a=document.querySelector("article");
+  h+="<h1>"+title+"</h1>\n";
+  var m=a.querySelector(".article-meta");
+  if(m) h+="<div class=\"meta\">"+m.innerHTML+"</div>\n";
+
+  var ss=a.querySelectorAll("section");
+  for(var i=0;i<ss.length;i++){
+    var s=ss[i],c=s.children;
+    for(var j=0;j<c.length;j++){
+      var e=c[j],t=e.tagName;
+      if(t==="H2") h+="<h2>"+e.textContent+"</h2>\n";
+      else if(t==="H3") h+="<h3>"+e.textContent+"</h3>\n";
+      else if(t==="H4") h+="<h4>"+e.textContent+"</h4>\n";
+      else if(t==="P") h+="<p>"+e.innerHTML+"</p>\n";
+      else if(t==="DIV"&&e.classList.contains("figure-box")){
+        var img=e.querySelector("img");
+        if(img){
+          var src=IMG_DATA[img.getAttribute("src")]||img.src;
+          h+="<img src=\""+src+"\" alt=\""+img.alt+"\">\n";
+        }
+        var cap=e.querySelector(".caption");
+        if(cap) h+="<p class=\"fig-cap\">"+cap.innerHTML+"</p>\n";
+      }
+      else if(t==="DIV"&&e.classList.contains("table-wrap")) h+=e.innerHTML+"\n";
+      else if(t==="DIV"&&e.classList.contains("ref-list")) h+="<div class=\"ref-list\">"+e.innerHTML+"</div>\n";
+    }
+  }
+  h+="</div>\n</body>\n</html>";
+
+  var blob=new Blob([h],{type:"text/html;charset=utf-8"});
+  var url=URL.createObjectURL(blob);
+  var dl=document.createElement("a");
+  dl.href=url;dl.download=title+".html";
+  document.body.appendChild(dl);
+  dl.click();
+  document.body.removeChild(dl);
+  URL.revokeObjectURL(url);
+  var btn=document.querySelector(".btn-download");
+  btn.classList.remove("loading");
+  btn.textContent="下载带图完整文章";
+}
+function downloadArticle(){fetchAndDownload();}
+</script>
+</body>
+</html>
